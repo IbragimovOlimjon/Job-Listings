@@ -4,6 +4,7 @@
     --text-color:#7C8F8F;
     --color-link:#5CA5A5;
     --fon-bg:#F2F2F2;
+    --global-fon:#EFFAFA;
     --font:"Spartan", "Arial", sans-serif;
 }
 
@@ -52,15 +53,15 @@ body {
     font-weight: 500;
     font-size: 15px;
     line-height: 24px;
-    background-color: var(--fon-bg);
+    background-color: var(--global-fon);
     color: var(--text-color);
     font-family: var(--font);
 }
 
 *:focus {
-    outline-color: #7282fc;                             
-    outline-offset: 3px;
-    outline-width: 2px;
+    outline-color: var(--color-link);                             
+    outline-offset: 2px;
+    outline-width: 3px;
     outline-style: dashed;
 }
 
@@ -133,14 +134,25 @@ img {
     border-left: 5px solid var(--color-link);
 }
 
+.job-listings-img-link {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 24px;
+    transition: 0.2s ease;
+}
+
+.job-listings-img-link:hover {
+    opacity: 0.7;
+}
 
 .job-listings-img {
+    display: block;
     width: 88px;
     height: 88px;
     object-fit: cover;
     flex-shrink: 0;
-    margin-right: 24px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .job-listings-list {
@@ -200,6 +212,8 @@ img {
     color: var(--title-color);
     margin-bottom: 8px;
     transition: 0.4s ease;
+    white-space: nowrap;
+    cursor: pointer;
 }
 
 .job-listing-title-link:hover {
@@ -214,6 +228,7 @@ img {
 .job-listings-meta-iteam {
     position: relative;
     letter-spacing: -0.115385px;
+    white-space: nowrap;
 }
 
 .job-listings-meta-iteam:not(:last-child) {
